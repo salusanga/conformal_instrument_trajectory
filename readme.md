@@ -2,6 +2,8 @@
 
 This repository contains the code and resources for the MICCAI 2025 paper titled **"Conformal forecasting for surgical instrument trajectory"**. The work explores uncertainty estimation in forecasting surgical instrument motion, leveraging conformal prediction techniques.
 
+For any question, please contact Sara Sangalli at sara.sangalli@vision.ee.ethz.ch.
+
 ## Paper Link 📄
 [Conformal forecasting for surgical instrument trajectory (MICCAI 2025)](https://papers.miccai.org/miccai-2025/paper/0260_paper.pdf)
 
