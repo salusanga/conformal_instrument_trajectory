@@ -1,0 +1,11 @@
+# Model from CQR paper
+net_type: "ConformalQuantileRegressorAngle"
+lr: 0.002
+hidden_dim: 64
+input_dim: 16
+batch_size: 512
+num_epochs: 500
+lr_warmup_perc: 0.04
+sched_step_size: 5
+lr_gamma: 0.95
+scheduler_type: "lambda_lr"
