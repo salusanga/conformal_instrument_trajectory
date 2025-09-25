@@ -1,4 +1,4 @@
-# Conformal Forecasting for Surgical Instrument Trajectory 🎯
+# Conformal Forecasting for Surgical Instrument Trajectory
 
 This repository contains the code and resources for the MICCAI 2025 paper titled **"Conformal forecasting for surgical instrument trajectory"**. The work explores uncertainty estimation in forecasting surgical instrument motion, leveraging conformal prediction techniques.
 
