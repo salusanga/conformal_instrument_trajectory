@@ -1,5 +1,5 @@
 # Model from CQR paper
-net_type: "ConformalQuantileRegressorAngle"
+net_type: "ConformalQuantileRegressor"
 lr: 0.002
 hidden_dim: 64
 input_dim: 16
