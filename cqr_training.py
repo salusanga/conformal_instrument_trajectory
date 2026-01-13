@@ -1,10 +1,9 @@
-# %% import torch
 import sys
 import os
 import wandb
 import argparse
 from easydict import EasyDict
-from transformers import get_cosine_schedule_with_warmup  # type: ignore
+from transformers import get_cosine_schedule_with_warmup
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -174,7 +173,6 @@ def main():
     init_weights(model)
     model = nn.DataParallel(model)
 
-    # model = ConformalQuantileRegressorAngle1(input_dim=16).to(device)
     if cfg.weight_decay != None:
         optimizer = optim.AdamW(
             model.parameters(), lr=cfg.lr, weight_decay=cfg.weight_decay
@@ -206,7 +204,6 @@ def main():
         quantile_loss = AllQuantileLoss([cfg.quantile_low, cfg.quantile_high])
     elif cfg.test_type == "angles":
         quantile_loss = CosineQuantileLoss([cfg.quantile_low, cfg.quantile_high])
-    # quantile_loss = AllQuantileLoss([cfg.quantile_low, cfg.quantile_high])
     best_val_loss = float("inf")  # Initialize before the loop
 
     # Training loop
@@ -279,7 +276,6 @@ def main():
                             torch.sin(gt_angle_val - pred_angle_val),
                             torch.cos(gt_angle_val - pred_angle_val),
                         ).unsqueeze(-1)
-                    # target_angle_val = gt_angle_val.unsqueeze(-1)
                     target_val = torch.cat((target_angle_val, target_length), dim=-1)
                 # Normalize the angle difference to [-π, π]
                 elif cfg.test_type == "angles":
