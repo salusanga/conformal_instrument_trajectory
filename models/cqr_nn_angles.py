@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
 
-class ConformalQuantileRegressorAngle(nn.Module):
+class ConformalQuantileRegressor(nn.Module):
     def __init__(self, input_dim, hidden_dim=64, num_quantiles=2, num_tests=2):
-        super(ConformalQuantileRegressorAngle, self).__init__()
+        super(ConformalQuantileRegressor, self).__init__()
         self.input_dim = input_dim
         self.hidden_dim = hidden_dim
         self.num_quantiles = num_quantiles
